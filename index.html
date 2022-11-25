@@ -1,0 +1,1015 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Quik Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="assets/images/fav.png">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <style>
+        .b-button {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .b-button {
+                display: block;
+                position: fixed;
+                z-index: 9999;
+                bottom: 0;
+                width: 100%;
+                background: #33bd95;
+                text-align: center;
+                padding: 4px 8px;
+                font-size: 18px;
+                color: #fff;
+            }
+
+            .footer-bottom-area {
+                margin-bottom: 30px;
+            }
+        }
+
+        .header-bottom-area.fixed {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background-color: #fff;
+            z-index: 999;
+        }
+
+        /* popup  CSs*/
+        #pop-up {
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 6px;
+            position: fixed;
+            top: 300px;
+            right: 0px;
+            z-index: 999999;
+            background: #ec3c01;
+            border: 2px solid #eceae9;
+            -webkit-box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        #call-btn {
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 6px;
+            position: fixed;
+            top: 115px;
+            right: 0px;
+            z-index: 999999;
+            background: #ec3c01;
+            border: 2px solid #eceae9;
+            -webkit-box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+            -moz-box-shadow: 0 0 2px #999;
+            -webkit-box-shadow: 0 0 2px #999;
+            box-shadow: 0 0 2px #999;
+        }
+
+        .sub-btn {
+            background: #ec3c01;
+            width: 100px;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .sub-btn:hover {
+            background: #333;
+            width: 100px;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        #pop-up {
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 6px;
+            position: fixed;
+            top: 300px;
+            right: 0px;
+            z-index: 999999;
+            background: #ec3c01;
+            border: 2px solid #eceae9;
+            -webkit-box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        #call-btn {
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 6px;
+            position: fixed;
+            top: 115px;
+            right: 0px;
+            z-index: 999999;
+            background: #6d6b6b;
+            border: 2px solid #eceae9;
+            -webkit-box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+            -moz-box-shadow: 0 0 2px #999;
+            -webkit-box-shadow: 0 0 2px #999;
+            box-shadow: 0 0 2px #999;
+        }
+
+        .sub-btn {
+            background: #e46564;
+            width: 100px;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 25px;
+            border-radius: 33px;
+        }
+
+        .sub-btn:hover {
+            background: #fff;
+            border: 2px solid #e46564;
+            width: 100px;
+            color: #e46564;
+            font-size: 18px;
+            padding: 10px 25px;
+            border-radius: 33px;
+        }
+
+        #btn-fix {
+            position: fixed;
+            right: 0px;
+            z-index: 999;
+            bottom: 12px;
+        }
+
+        @media(max-width:768px) {
+            #btn-fix {
+                position: fixed;
+                right: 0px;
+                z-index: 999;
+                bottom: 200px;
+            }
+        }
+
+        /* popup Css */
+        .navbar-inverse .navbar-toggle .icon-bar {
+            background-color: #2a9c36 !important;
+        }
+
+        .navbar-inverse .navbar-toggle {
+            border-color: #2a9c36 !important;
+            ;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+    <span data-toggle="modal" data-target="#myModal" id="btn-fix"><img src="assets/feedback.png" width="85" alt=""></span>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- redirect Code -->
+                    <h4 class="modal-title">Enquiry Form
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-10 col-sm-12 col-xs-12">
+                            <form action="https://code.dvtpl.in/thanku.php" id="form" style="margin:0px" method="post" onSubmit="return ValidateForm(this);">
+                                <div class="row">
+                                    <input id="name" name="name" class="form-control" placeholder="Name" type="text" required>
+                                    <input id="email" name="email" class="form-control" placeholder="Email" type="text" required>
+                                    <input type="text" name="mobile" pattern="[0-9]{10,10}" autocomplete="off" maxlength="10" id="extra7" onKeyPress="return isNumber(event)" class="form-control" placeholder="Mobile No" required>
+                                    <textarea id="msg" name="msg" class="form-control" placeholder="Message" required></textarea>
+                                </div>
+                                <!-- Mention the Client Mail ID's on which information have to send -->
+                                <input name="clientMailID" type="hidden" value="serviceandrepair2@gmail.com" />
+                                <!-- Website Name where to divert for conversion -->
+                                <input name="website" type="hidden" value="#" />
+                                <!-- Auto Incremented -->
+                                <input name="loginID" type="hidden" value="#" />
+                                <!-- Company Name -->
+                                <input name="companyName" type="hidden" value="Quik Service" />
+                                <input class="btn sub-btn center-block" type="submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="callme-1"> <a href="https://api.whatsapp.com/send?phone=919766066366" target="blank"> <img src="assets/whatsup.png" width="50px"> </a> </div>
+    <!--<div id="callme-p"> <a href="#" target="blank"> <img src="assets/online2.png" width="170px"> </a> </div>-->
+    <div id="callme">
+        <a href="tel: 9766066366">
+            <div id="callmeMain"></div>
+        </a>
+    </div>
+    <!-- header-area start -->
+    <header class="header-area" id="index">
+        <div class="header-top-area">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-lg-8 bder-right  fnt-14-tp white-clrr">
+                        <i class="fa fa-map" style="font-size:22px"></i> Shri Kumbkar, Shivaji Pandurang, 659/11, Rajiv Gandhi Nagar, Bibawewadi, Pune (Maharashtra) - 411037
+                    </div>
+                    <!-- <div class="col-lg-4 col-sm-6 bder-right  white-clrr text-center">
+                     <i class="fa fa-phone" style="font-size:22px"></i> <a href="tel:9766066366" class="bl-clr white-clrr">9766066366</a>
+                  </div>-->
+
+                    <div class="col-lg-4 col-sm-6 bder-right hidden-xs white-clrr">
+                        <i class="fa fa-envelope"></i><a href="emailto:serviceandrepair2@gmail.com" class="bl-clr white-clrr"> serviceandrepair2@gmail.com </a>
+                    </div>
+                    <!--<div class="col-sm-1 bder-right">
+                     <div class="header-top-right text-right">
+                                             <ul>
+                                                 <li><a href="https://www.facebook.com/nidhi.jha.908" target="blank"><i class="fa fa-facebook" style="color:#2196F3;font-size:22px"></i></a></li>
+                                                
+                                             </ul>
+                                         </div>
+                     </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom-area" id="sticky-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-12 col-xs-12 hidden-xs">
+                        <div class="logo"> <a href="index.html"> <img src="assets/logo.png" class="" alt=""> </a> </div>
+                    </div>
+                    <div class="col-lg-9 col-sm-12 hidden-xs">
+                        <div class="mainmenu text-right">
+                            <ul id="navigation">
+                                <li><a href="#index">Home</a></li>
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="#Our-Services">Our Services</a></li>
+                                <li><a href="#Gallery">Gallery</a></li>
+                                <li><a href="#contact">Contact Us</a></li>
+                                <li><a href="tel:9766066366">Call Us :9766066366</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class=" clear col-xs-12  hidden-lg hidden-md hidden-sm">
+                        <nav class="navbar ">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#">
+                                        <img src="assets/logo.png" class="" alt="">
+                                    </a>
+                                </div>
+                                <div class="collapse navbar-collapse">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="#index">Home</a></li>
+                                        <li><a href="#about">About Us</a></li>
+                                        <li><a href="#Our-Services">Our Services</a></li>
+                                        <li><a href="#Gallery">Gallery</a></li>
+                                        <li><a href="#contact">Contact Us</a></li>
+                                        <li><a href="tel: 9766066366">Call Us :9766066366</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="responsive-menu-wrap floatright">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-area End -->
+
+    <!-- Slider-area start -->
+    <div class="banner-form">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="assets/images/slider/banner2.png" width="100%" alt="Los Angeles">
+                </div>
+                <div class="item">
+                    <img src="assets/images/slider/banner1.png" width="100%" alt="Chicago">
+                </div>
+            </div>
+            <!-- Left and right controls -->
+            <!--<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+               <span class="glyphicon glyphicon-chevron-left"></span>
+               <span class="sr-only">Previous</span>
+               </a>
+               <a class="right carousel-control" href="#myCarousel" data-slide="next">
+               <span class="glyphicon glyphicon-chevron-right"></span>
+               <span class="sr-only">Next</span>
+               </a>-->
+        </div>
+        <!--<div class="ban-form">
+            <p class="ban-form-text fm-mb-10">ENQUIRE NOW</p>
+                        
+                        <form action="https://code.dvtpl.in/thanku.php" style="margin:0px" method="post" onSubmit="return ValidateForm(this);">
+                      
+                          <div class="form-group fm-mb-10">
+                            <input type="text" class="form-control" name="name" placeholder="Full Name" required>
+                          </div>
+                    <div class="form-group fm-mb-10">
+                            <input type="text" class="form-control" name="email" placeholder="Email" required>
+                          </div>
+                          <div class="form-group fm-mb-10">
+                            <input type="text" required class="form-control" pattern="[0-9]{10,10}" autocomplete="off"  maxlength="10" id="extra7" onKeyPress="return isNumber(event)" name="mobile" placeholder="Mobile Number">
+                          </div>
+                    
+                    <div class="form-group fm-mb-10">
+                            <textarea class="form-control" name="msg" placeholder="Message" ></textarea>
+                          </div>
+                          
+                       <input name="clientMailID" type="hidden" value=" serviceandrepair2@gmail.com"/>
+            
+                   
+                <input name="website" type="hidden" value="aoneelectronics.co.in/thanku.html" />
+                   
+                <input name="loginID" type="hidden" value=" 10145" />
+                  
+                <input name="companyName" type="hidden" value="Quik Service" />
+                          <input type="submit" class="btn-lg fm-sbmt">
+                        </form>
+                      </div>-->
+    </div>
+    <!-- Slider-area End -->
+
+    <!-- Marquee area start -->
+    <div class="mq">
+        <div class="container">
+            <marquee direction="left" class="mq-cl"><strong></strong> We provide All Types Washing Machines, Fridges, Microwave., Service & Repairing</marquee>
+        </div>
+    </div>
+    <!-- Marquee area end -->
+
+
+    <!-- about-area start -->
+    <div class="about-area ptb-120 about-area2" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 ">
+                    <div class="about-img"><img src="assets/images/about/about-bg.PNG" style="border-radius: 10px;"> </div>
+                </div>
+                <div class="col-lg-6 col-sm-12 col-xs-12">
+                    <div class="about-wrap">
+                        <h3 class="text-center">About Us</h3>
+                        <p class="text-justify"> Quik Services Expert Repairs are specialists in Home Appliance Repair and Servicing. Our team of specialists can repair, service, and install all domestic appliances. With our qualified engineers covering all areas of Pune (Maharashtra). we can look after all large appliances including washing machines, fridges, Microwave.</p>
+                        <p class="text-justify">At Quik Service, Our Appliances Repair is a service provider company that is serving in appliances repairing and maintenance field in Pune (Maharashtra). We are here for you with highly professional and expert technicians.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- about-area start -->
+
+
+
+    <!-- service-area start -->
+    <div class="service-area service-area2 service-area3 ad" id="Our-Services">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-sm-10 col-sm-offset-1  col-md-offset-2 col-lg-6 col-lg-offset-3">
+                    <div class="section-title text-center ">
+                        <h2 class="hed">OUR ADVANTAGES</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6  ">
+                    <div class="service-wra ad-bder">
+                        <div class="service-content ">
+                            <img src="assets/images/service/w1.png" alt="Western Pharmacy">
+                            <h3 style="color:#fff;">On Time Delivery</h3>
+                            <p>We are committed to offer you on time services, as it is a part of our code of conduct. We believe that to maintain the dignity in us on time repair is Important.</p>
+                            <p class="btn-call">
+                                <a href="tel: 9766066366">Call Now</a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6  ">
+                    <div class="service-wra ad-bder">
+                        <div class="service-content">
+                            <img src="assets/images/service/w2.png" alt="Western Pharmacy">
+                            <h3 style="color:#fff;">Great Support</h3>
+                            <p>A great Support is how the client gets familiar with the company, and as we think Client Satisfaction is on the higher priority, and we tend to meet it.</p>
+                            <p class="btn-call aa">
+                                <a href="tel: 9766066366">Call Now</a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 ">
+                    <div class="service-wra ad-bder">
+                        <div class="service-content">
+                            <img src="assets/images/service/w3.png" alt="Western Pharmacy">
+                            <h3 style="color:#fff;">Affordable Price</h3>
+                            <p>We deliver our services on the most Competitive and convenient pricing so as to make our client flexible and comfortable with our pricing and efficiency.</p>
+                            <p class="btn-call">
+                                <a href="tel: 9766066366">Call Now</a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- service-area end -->
+
+
+
+    <!-- service-area2 start -->
+    <div class="service-area service-area2 service-area3" id="Our-Services">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-sm-10 col-sm-offset-1  col-md-offset-2 col-lg-6 col-lg-offset-3">
+                    <div class="section-title text-center">
+                        <h2 class="ser-tex">What we do</h2>
+                        <p>Quik Service</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="service-wrap mn-hgt-sr-709">
+                        <div class="service-content sss ">
+                            <img src="assets/images/service/1.png" alt="REFRIGERATOR SERVICE">
+                            <h3 class="tex-ser">REFRIGERATOR SERVICE</h3>
+                            <p>With a rich market experience, we are able to offer a wide spectrum of Refrigerator Services.</p>
+                            <a href="tel: 9766066366">Call Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="service-wrap mn-hgt-sr-709">
+                        <div class="service-content sss ">
+                            <img src="assets/images/service/2.PNG" alt="WASHING MACHINE SERVICE">
+                            <h3 class="tex-ser">WASHING MACHINE SERVICE</h3>
+                            <p>We provided repairing services.Also, we provide Washing Machine<br> services.</p>
+                            <a href="tel: 9766066366">Call Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="service-wrap mn-hgt-sr-709">
+                        <div class="service-content sss ">
+                            <img src="assets/images/service/3.PNG" alt="MICROWAVE SERVICE">
+                            <h3 class="tex-ser">MICROWAVE SERVICE</h3>
+                            <p>We provided repairing services.Also, we provide Microwave<br> services.</p>
+                            <a href="tel: 9766066366">Call Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- service-area2 end -->
+
+
+    <!-- callto-action-area start -->
+    <div class="callto-action-area bg-img-1 black-opacity">
+        <div class="container">
+            <div class="row">
+                <!--<div class="col-md-4 hidden-sm hidden-xs">
+                  <div class="callto-action-img text-center"> <img src="assets/images/call.png" alt=""> </div>
+                  </div>-->
+                <div class=" col-xs-12">
+                    <div class="callto-action-wrap text-center">
+                        <h2>
+                            Would You Like To Know More?
+                        </h2>
+                        <a href="tel: 9766066366" target="blank">Call Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- callto-action-area End -->
+
+
+
+    <!-- Our Gallery-area start -->
+    <div class="service-area service-area2 service-area3" id="service" style="margin-bottom:80px">
+        <div class="container" id="Gallery">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-sm-10 col-sm-offset-1  col-md-offset-2 col-lg-6 col-lg-offset-3">
+                    <div class="section-title text-center">
+                        <h2 class="gallery-tex">Our Gallery</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-4 ">
+                    <div class="our-g">
+                        <img src="assets/g1.png" alt="" />
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 ">
+                    <div class="our-g">
+                        <img src="assets/g2.png" alt="" />
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 ">
+                    <div class="our-g">
+                        <img src="assets/g3.png" alt="" />
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 ">
+                    <div class="our-g">
+                        <img src="assets/g4.png" alt="" />
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 ">
+                    <div class="our-g">
+                        <img src="assets/g5.png" alt="" />
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 ">
+                    <div class="our-g">
+                        <img src="assets/g6.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Gallery-area End -->
+
+
+
+    <!-- Contactus-area1 Start -->
+    <div class="container second-portion">
+        <div class="row">
+            <!-- Boxes de Acoes -->
+            <div class="col-lg-4  col-sm-6 col-xs-12">
+                <div class="box">
+                    <div class="icon">
+                        <div class="image"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                        <div class="info">
+                            <h3 class="title">ADDRESS</h3>
+                            <p>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i> Shri Kumbkar, Shivaji Pandurang, 659/11, Rajiv Gandhi Nagar, Bibawewadi, Pune (Maharashtra) - 411037
+                            </p>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-xs-12">
+                <div class="box">
+                    <div class="icon">
+                        <div class="image"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                        <div class="info">
+                            <h3 class="title">EMAIL</h3>
+                            <p>
+                                <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp serviceandrepair2@gmail.com
+                                <br>
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-xs-12">
+                <div class="box">
+                    <div class="icon">
+                        <div class="image"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+                        <div class="info">
+                            <h3 class="title">CONTACT</h3>
+                            <p>
+                                <i class="fa fa-mobile" aria-hidden="true"></i> &nbsp +91-9766066366
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+            <!-- /Boxes de Acoes -->
+            <!--My Portfolio  dont Copy this -->
+        </div>
+    </div>
+    <!-- Contactus-area1 End -->
+
+
+
+    <!-- Contactus-area2 Start -->
+    <section class="ctc-mg-tp-btm contact-pdng" id="contact">
+        <div class="container animated fadeIn">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-sm-10 col-sm-offset-1  col-md-offset-2 col-lg-6 col-lg-offset-3">
+                    <div class="section-title text-center">
+                        <h2 class="cont-tex">Contact Us</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="form-img"> <img src="assets/ctc.png" style="border-radius: 10px;"></div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <form action="https://code.dvtpl.in/thanku.php" class="contact-form" id="ContactUsCaptchaWebForm" method="post" onSubmit="return ValidateForm(this);">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Name" required="">
+                        </div>
+                        <div class="form-group form_left">
+                            <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="mobile" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" placeholder="Mobile No." required="">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control textarea-contact" name="msg" placeholder="Type Your Message/Feedback here..." required=""></textarea>
+                            <br>
+                            <input name="clientMailID" type="hidden" value=" serviceandrepair2@gmail.com" />
+                            <!-- Website Name where to divert for conversion -->
+                            <input name="website" type="hidden" value="" />
+                            <!-- Auto Incremented -->
+                            <input name="loginID" type="hidden" value="" />
+                            <!-- Company Name -->
+                            <input name="companyName" type="hidden" value="Quik Service" />
+                            <button class="btn btn-default btn-send" type="submit"> <span class="glyphicon glyphicon-send"></span> Send </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Contactus-area2 End -->
+
+
+
+    <!--
+         <div class="service-area service-area2 service-area3" id="service" style="margin-bottom:80px">
+           <div class="container" id="Gallery">
+             <div class="row">
+               <div class="col-xs-12 col-md-8 col-sm-10 col-sm-offset-1  col-md-offset-2 col-lg-6 col-lg-offset-3">
+                 <div class="section-title text-center">
+                   <h2>Our Gallery</h2>
+                 </div>
+               </div>
+             </div>
+         <div class="row">
+         <div class="col-md-12">
+           
+            <section class="customer-logos slider">
+            <div class="slide"><img src="assets/images/service/1s.png"></div>
+            <div class="slide"><img src="assets/images/service/2s.png"></div>
+            <div class="slide"><img src="assets/images/service/4s.png"></div>
+            <div class="slide"><img src="assets/images/service/5s.png"></div>
+            <div class="slide"><img src="assets/images/service/6s.png"></div>
+            <div class="slide"><img src="assets/images/service/7s.png"></div>
+            <div class="slide"><img src="assets/images/service/8s.png"></div>
+            <div class="slide"><img src="assets/images/service/9s.png"></div>
+            <div class="slide"><img src="assets/images/service/10s.png"></div>
+            <div class="slide"><img src="assets/images/service/11s.png"></div>
+            <div class="slide"><img src="assets/images/service/12s.png"></div>
+            <div class="slide"><img src="assets/images/service/14s.png"></div>
+            <div class="slide"><img src="assets/images/service/15s.png"></div>
+            <div class="slide"><img src="assets/images/service/16s.png"></div>
+            <div class="slide"><img src="assets/images/service/17s.png"></div>
+           
+           
+            
+            </section>
+         </div>
+         </div>
+         </div>
+         </div>-->
+
+
+    <!-- <div class="cleaning-content-block ppp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center">
+                            <h2 class="partener-tex">OUR SERVICES PARTNERS</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="owl-carousel owl-theme" id="ourpartner">
+                            
+                            <div class="item">
+                                <figure><img src="assets/images/b2.png"> </figure>
+                            </div> 
+                            <div class="item">
+                                <figure><img src="assets/images/b3.png"> </figure>
+                            </div> 
+                            <div class="item">
+                                <figure><img src="assets/images/b4.png"> </figure>
+                            </div> 
+                             <div class="item">
+                                <figure><img src="assets/images/b15.png"> </figure>
+                            </div>
+                             <div class="item">
+                                <figure><img src="assets/images/b6.png"> </figure>
+                            </div>
+  
+                             <div class="item">
+                                <figure><img src="assets/images/b10.png"> </figure>
+                            </div>
+                             <div class="item">
+                                <figure><img src="assets/images/b11.png"> </figure>
+                            </div>
+     
+                             <div class="item">
+                                <figure><img src="assets/images/b15.png"> </figure>
+                            </div>
+                             <div class="item">
+                                <figure><img src="assets/img/b16.png"> </figure>
+                            </div>
+                             
+                             <div class="item">
+                                <figure><img src="assets/img/b18.png"> </figure>
+                            </div>
+                            <div class="item">
+                                <figure><img src="assets/img/b21.png"> </figure>
+                            </div>
+                             
+                             
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    <!-- partner-area Start -->
+    <!-- <div class="partener">
+    <div class="container">
+       <div class="partner-slot">
+         <h4 class="partner-hed">OUR SERVICES PARTNERS</h4> 
+       </div>
+       <div class="partner-dtata">
+          <ul>
+             <li>
+               <div class="img"><img src="assets/images/b21.png"> </div> 
+             </li>
+
+             <li>
+               <div class="img"><img src="assets/images/b19.png"> </div>
+             </li>
+             <li>
+               <div class="img"><img src="assets/images/b15.png"> </div> 
+             </li>
+             <li>
+               <div class="img"><img src="assets/images/b18.png"> </div> 
+             </li>
+             <li>
+               <div class="img"><img src="assets/images/b20.png"> </div> 
+             </li>
+             <li>
+               <div class="img"><img src="assets/images/b3.png"> </div> 
+             </li>
+
+          </ul>
+       </div>
+    </div>
+         </div>-->
+    <!-- partner-area End -->
+
+
+    <!-- footer-area start -->
+    <footer class="footer-area" id="contact">
+        <div class="footer-top-area black-opacity bg-img-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12 col-2">
+                        <div class="footer-widget footer-contact">
+                            <h2>About Us</h2>
+                            <p class="text-justify" style="color:#fff">Quik Services Expert Repairs are specialists in Home Appliance Repair and Servicing. Our team of specialists can repair, service, and install all domestic appliances. With our qualified engineers covering all areas of Pune (Maharashtra). we can look after all large appliances including Washing Machines, Fridges, Microwave. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 col-2">
+                        <div class="footer-widget footer-contact">
+                            <h2>Contact Us</h2>
+                            <ul>
+                                <!--<li><strong> SOHAMMA INTERNATIONAL PVT. LTD.<br> </strong></li>
+                              <li></li>-->
+                                <li><i class="fa fa-map-marker"></i> Shri Kumbkar, Shivaji Pandurang, 659/11, Rajiv Gandhi Nagar, Bibawewadi, Pune (Maharashtra) - 411037</li>
+                                <li> <i class="fa fa-phone"></i> <a href="tel:9766066366" style="color:#fff"> Call Us: +91- 9766066366 </a></li>
+                                <li><i class="fa fa-envelope"></i> <a href="mailto:serviceandrepair2@gmail.com " style="color:#fff"> serviceandrepair2@gmail.com </a></li>
+                            </ul>
+                            <div class="clr"></div>
+                            <!-- <span style="margin-right:15px"><a href="#" target="blank"><img src="assets/facebook.png" width="50px"/></a></span> -->
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-12 col-2">
+                        <div class="footer-widget footer-contact">
+                            <h2>Quik Links</h2>
+                            <ul>
+                                <li><a href="#index">Home</a></li>
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="#Our-Services">Our Services</a></li>
+                                <li><a href="#Gallery">Gallery</a></li>
+                                <li><a href="#contact">Contact Us</a></li>
+                            </ul>
+                            <div class="clr"></div>
+                            <!-- <span style="margin-right:15px"><a href="" target="blank"><img src="assets/facebook.png" width="50px"/></a></span> -->
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 col-2" id="contact">
+                        <div class="footer-widget footer-menu">
+                            <h2>Enquiry Now</h2>
+                            <form action="https://code.dvtpl.in/thanku.php" id="ContactUsCaptchaWebForm" method="post" onSubmit="return ValidateForm(this);">
+                                <script type="text/javascript">
+                                    function ValidateForm(frm) {
+
+                                        if (frm.mobile.value == "" || frm.mobile.value == null) {
+                                            alert('Mobile number is required.');
+                                            frm.mobile.focus();
+                                            return false;
+                                        }
+
+                                        function ReloadCaptchaImage(captchaImageId) {
+                                            var obj = document.getElementById(captchaImageId);
+                                            var src = obj.src;
+                                            var date = new Date();
+                                            var pos = src.indexOf('&rad=');
+                                            if (pos >= 0) {
+                                                src = src.substr(0, pos);
+                                            }
+                                            obj.src = src + '&rad=' + date.getTime();
+                                            return false;
+                                        }
+
+                                </script>
+                                <script>
+                                    function isNumber(evt) {
+                                        evt = (evt) ? evt : window.event;
+                                        var charCode = (evt.which) ? evt.which : evt.keyCode;
+                                        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                                            return false;
+                                        }
+                                        return true;
+                                    }
+
+                                </script>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" placeholder="Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" required class="form-control" pattern="[0-9]{10,10}" autocomplete="off" maxlength="10" id="extra7" onKeyPress="return isNumber(event)" name="mobile" placeholder="Mobile Number">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" name="msg" placeholder="Message" required></textarea>
+                                </div>
+                                <input name="clientMailID" type="hidden" value=" serviceandrepair2@gmail.com" />
+                                <!-- Website Name where to divert for conversion -->
+                                <input name="website" type="hidden" value="serviceandrepair2@gmail.com/thanku.html" />
+                                <!-- Auto Incremented -->
+                                <input name="loginID" type="hidden" value="  10145" />
+                                <!-- Company Name -->
+                                <input name="companyName" type="hidden" value="Quik Service" />
+                                <input type="submit" class="btn-lg">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <p class="text-center " style="color:white">© Copyright 2022 Quik Service. | Designed By <a href="http://www.dvtpl.com/" target="_blank" class="font-sze-12" style="color:#fff">Digital <span style="color:#d20027">Vision</span> Technology Pvt. Ltd.</a><span style="color:#4285F4;">G</span><span style="color:#EA4335;">o</span><span style="color:#FBBC05;">o</span><span style="color:#4285F4;">g</span><span style="color:#34A853;">l</span><span style="color:#EA4335;">e</span> Partner </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-area End -->
+
+
+    <div class="wrap b-button">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6"> <a href="https://api.whatsapp.com/send?phone=919766066366" class="enq-call blink wt" target="blank"><i class="fa fa-whatsapp"></i> </a> </div>
+                <div class="col-xs-6"> <a href="tel: 9766066366" class="enq-call blink cl"><i class="fa fa-phone"></i></a> </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer-area end -->
+
+
+    <!-- jquery latest version -->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> -->
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/active.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 120) {
+                    $('.header-bottom-area').addClass('fixed');
+                } else {
+                    $('.header-bottom-area').removeClass('fixed');
+                }
+            });
+
+            $('.customer-logos').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                }, {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }]
+            });
+
+
+
+            $('#ourpartner').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 6
+                    }
+                }
+            });
+
+
+            $('.navbar-collapse a').on('click', function() {
+                $(".navbar-collapse").collapse('hide');
+            });
+
+
+        })
+
+    </script>
+</body>
+
+</html>
